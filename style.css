@@ -1,8 +1,96 @@
+@font-face {
+    font-family: 'bettertogether'; 
+    src: url('assets/bettertogether.ttf');
+}
+
+@font-face {
+    font-family: 'sunny'; 
+    src: url('assets/sunny.otf');
+}
+
+@font-face {
+    font-family: 'scary'; 
+    src: url('assets/helpme.ttf');
+}
+
+@keyframes bounce {
+    0% {
+        top: 50px
+    }
+    
+    80% {
+        top: 0px
+    }
+
+    100% {
+        top: 50px
+    }
+}
+
 body {
     background-color: #eeeeee;
     color: #000000;
+    margin-left: 80px;
+    margin-top: -80px;
+    margin-bottom: -200px;
+    cursor: url('assets/zombie-pointer.png'), auto;
 }
-  
-p {
-    color: rgb(69, 69, 158);
+
+h1 {
+    font-family: 'bettertogether', sans-serif;
+    font-size: 200px;
+    font-weight: normal;
+}
+
+p span {
+    font-size: 64px;
+    display: block;
+    margin-bottom: 110px;
+    margin-top: -100px;
+    color: rgb(114, 5, 5);
+}
+
+.fear {
+    font-family: 'scary', sans-serif;
+    font-size: 60px;
+    color: rgb(144, 8, 8); 
+    margin-top: -80px;
+}
+
+.container {
+    position: relative;
+}
+
+.confetti-btn {
+    position: absolute;
+    top: 40px;  
+    left: 400px;
+    font-size: 64px;
+    padding: 8px 16px;
+    background-color: #5d2e2e;
+    border: 2px solid rgb(186, 128, 128);
+    border-width: 5px;
+    color: rgb(202, 174, 174);
+    font-family: 'sunny', sans-serif;
+    cursor: url('assets/demon-hand.png'), auto;
+
+    border-radius: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.confetti-btn:hover {
+    transform: scale(1.2); 
+    box-shadow: 6px 7px 0 rgb(186, 128, 128);
+}
+
+.confetti-btn:active {
+    transform: scale(0.95); 
+}
+
+
+.bouncy-text{
+    position: relative;
+    animation-name: bounce;
+    animation-duration: 3.0s;
+    animation-iteration-count: infinite;
 }
